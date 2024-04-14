@@ -1,12 +1,12 @@
 //your JS code here. If required.
-if (localStorage.getItem('username') && localStorage.getItem('password')) {
-	        var existingButton = document.getElementById('existing');
-	       existingButton.style.display = "block";
-	existingButton.addEventListener('click', function() {
+document.getElementById('existing').addEventListener('click', function() {
             var username = localStorage.getItem('username');
             alert('Logged in as .');
         });
-        document.body.appendChild(existingButton);
+
+if (localStorage.getItem('username') && localStorage.getItem('password')) {
+	        var existingButton = document.getElementById('existing');
+	       existingButton.style.display = "block";
 
 }
 else{
@@ -27,7 +27,7 @@ document.getElementById("submit").addEventListener("click",(e)=>{
             localStorage.removeItem('password');
         }
 
-        alert('Logged in as user.');	
+        alert('Logged in as username);	
 });
 if (localStorage.getItem('username') && localStorage.getItem('password')) {
         
