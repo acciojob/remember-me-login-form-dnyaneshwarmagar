@@ -15,13 +15,14 @@ document.getElementById("submit").addEventListener("click",(e)=>{
 
         alert('Logged in as user.');	
 });
-if (localStorage.getItem('username') && localStorage.getItem('password')) {
-        var existingButton = document.createElement('button');
-        existingButton.textContent = 'Login as existing user';
-        existingButton.id = 'existing';
+
+        var existingButton = document.getElementById('existing');
+
         existingButton.addEventListener('click', function() {
             var username = localStorage.getItem('username');
+			if(!!username){
+				
             alert('Logged in as .');
+			}
         });
-        document.body.appendChild(existingButton);
-    }
+    
