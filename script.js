@@ -13,7 +13,7 @@ document.getElementById("submit").addEventListener("click",(e)=>{
             localStorage.removeItem('password');
         }
 
-        alert('Logged in as ' + username);	
+        alert('Logged in as user.');	
 });
 if (localStorage.getItem('username') && localStorage.getItem('password')) {
         var existingButton = document.createElement('button');
@@ -21,7 +21,7 @@ if (localStorage.getItem('username') && localStorage.getItem('password')) {
         existingButton.id = 'existing';
         existingButton.addEventListener('click', function() {
             var username = localStorage.getItem('username');
-            alert('Logged in as ' + username);
+            alert('Logged in as .');
         });
         document.body.appendChild(existingButton);
     }
