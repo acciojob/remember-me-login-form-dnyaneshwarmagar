@@ -15,14 +15,12 @@ document.getElementById("submit").addEventListener("click",(e)=>{
 
         alert('Logged in as user.');	
 });
-
+if (localStorage.getItem('username') && localStorage.getItem('password')) {
         var existingButton = document.getElementById('existing');
 
         existingButton.addEventListener('click', function() {
             var username = localStorage.getItem('username');
-			if(!!username){
-				
-            alert('Logged in as .');
-			}
+            alert('Logged in as username.');
         });
-    
+        document.body.appendChild(existingButton);
+    }
